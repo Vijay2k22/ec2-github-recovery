@@ -44,7 +44,7 @@ resource "aws_iam_role" "deploy" {
     Principal = { Federated = var.oidc_provider_arn != "" ? var.oidc_provider_arn : aws_iam_openid_connect_provider.github[0].arn },
     Condition = { StringEquals = {
       "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com",
-      "token.actions.githubusercontent.com:sub" = "repo:${var.github_repo}:ref:refs/heads/main"
+      "token.actions.githubusercontent.com:sub" = "repo:Vijay2k22@119030242/ec2-github-recovery@1435457169:ref:refs/heads/main"
     } }
   }] })
 }
